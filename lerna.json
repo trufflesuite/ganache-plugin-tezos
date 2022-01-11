@@ -1,0 +1,13 @@
+{
+    "packages": ["src/*"],
+    "version": "independent",
+    "command": {
+      "version": {
+        "allowBranch": ["beta", "alpha", "canary"]
+      },
+      "bootstrap": {
+        "reject-cycles": true
+      }
+    }
+  }
+  
