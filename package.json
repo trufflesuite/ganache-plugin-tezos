@@ -7,18 +7,15 @@
       "npm": ">=6.12.0"
     },
     "scripts": {
-      "build": "npm run tsc && cross-env NODE_OPTIONS=--max_old_space_size=4096 lerna run build",
       "clean": "npm run tsc.clean && npx lerna clean -y && npx shx rm -rf node_modules",
       "create": "ts-node scripts/create",
-      "docs.build": "shx cp -r src/packages/ganache/dist/web/* docs/assets/js/ganache && lerna run docs.build && ts-node scripts/build-docs/",
-      "docs.preview": "lerna run docs.preview",
       "postinstall": "lerna bootstrap && npx patch-package && ts-node scripts/link-ts-references.ts && npm run tsc && ts-node scripts/postinstall && lerna run copyassets",
       "reinstall": "npm run clean && npm install",
       "prepublishOnly": "ts-node ./scripts/filter-shrinkwrap.ts \"$(lerna list --parseable --scope ganache)\"/npm-shrinkwrap.json",
       "postpublish": "git restore \"$(lerna list --parseable --scope ganache)\"/npm-shrinkwrap.json",
       "start": "lerna exec --loglevel=silent --scope ganache -- npm run start --silent -- ",
       "test": "lerna exec --concurrency 1 -- npm run test",
-      "tsc": "ttsc --build src",
+      "tsc": "ttsc --build packages",
       "tsc.clean": "npx lerna exec -- npx shx rm -rf lib dist typings"
     },
     "devDependencies": {

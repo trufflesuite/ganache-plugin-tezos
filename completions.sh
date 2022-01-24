@@ -17,7 +17,7 @@ _npmScriptsCompletions() {
       while [[ "$#" -gt 0 ]]; do
         case $1 in
         -l | --location)
-          type_list=$(cd src && find * /* -maxdepth 0 -type d && cd ../)
+          type_list=$(cd packages && find * /* -maxdepth 0 -type d && cd ../)
           shift
           ;;
         - | --l | --lo | --loc | --loca | --locat | --locati | --locatio)

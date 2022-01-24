@@ -1,0 +1,1 @@
+{"version":3,"file":"account.d.ts","sourceRoot":"","sources":["../../../src/things/account.ts"],"names":[],"mappings":"AAAA,qBAAa,OAAO;IACX,IAAI,EAAE,MAAM,CAAC;IACb,EAAE,EAAE,MAAM,CAAC;IACX,GAAG,EAAE,MAAM,CAAC;IACZ,EAAE,EAAE,MAAM,CAAC;IACX,SAAS,EAAE,UAAU,CAAC;IACtB,OAAO,EAAE,MAAM,CAAC;CACxB"}
